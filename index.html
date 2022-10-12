@@ -5,62 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ohmyfood</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
+    <link rel="stylesheet" href="asset/css/fontawesome.min.css">
+    <link rel="stylesheet" href="asset/css/solid.min.css">
+    <link rel="stylesheet" href="asset/css/regular.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link rel='stylesheet' type='text/css' media='screen' href='css/normalize.css'>
     <link rel="stylesheet" type='text/css' media='screen' href="css/css.css">
   </head>
   <body>
-    <div id="container">
+    <div class="container">
         <header>
-            <img src="">
-            <div id="subtitle"> Paris,Belleville</div>
+            <div class="title"> ohmyfood </div>
+            <div class="subtitle"><i class="fa-solid fa-location-dot"></i>Paris,Belleville</div>
         </header>
         <main>
-            <section id="pres">
-                <h1>Reservez le menu qui vous convient</h1>
-                <p> Découvrez des restaurant d'exception, séléctionnés par nos soins.</p>  
+            <section class="presentation">
+                <h1>Réservez le menu qui vous convient</h1>
+                <div class="presentation-text"> Découvrez des restaurant d'exception, séléctionnés par nos soins.</div>  
                 <div class="btn">
-                    <a href="restau"><p>Explorer nos restaurants</p></a>
+                    <a href="restaurant"><p class="btn-text">Explorer nos restaurants</p></a>
                 </div>
             </section>
-            <div id="fonctionnement">
+            <div class="fonctionnement">
                 <h2>Fonctionnement</h2>
-                <section id="grid-fonction">
+                <section class="grid-fonction">
                     <article class="btn-fonction">
                         <a href="#">
-                            <p>1</p>
-                            <i class=""></i>
-                            <p>Choisissez votre restaurant</p>
+                            <div class="function-number">1</div>
+                            <i class="fa-solid fa-mobile-screen"></i>
+                            <p>Choisissez un restaurant</p>
                         </a>
                     </article>
                     <article class="btn-fonction">
                         <a href="#">
-                            <p>2</p>
-                            <i class=""></i>
+                            <p class="function-number">2</p>
+                            <i class="fa-solid fa-list"></i>
                             <p>Composez votre menu</p>
                         </a>
                     </article>
                     <article class="btn-fonction">
                         <a href="#">
-                            <p>3</p>
-                            <i class=""></i>
+                            <p class="function-number">3</p>
+                            <i class="fa-solid fa-store"></i>
                             <p>Dégustez au restaurant</p>
                         </a>
                     </article>
                 </section>
             </div>
-            <div id="restau">
+            <div class="restaurant">
                 <h2>Restaurant</h2>
-                <section id="grid-restau">
+                <section class="restaurant-grid">
                     <article class="card">
                         <a href="menu-palette.html">
-                            <picture>
-                                <img>
-                            </picture>
+                            <img src="">
                             <div class="description">
-                                <p class="title"> La palette du goût</p>
-                                <p>Ménilmontant</p>
-                                <a href=""><i class=""></i></a>
+                                <strong class="title"> La palette du goût</strong>
+                                <div class="text">Ménilmontant</div>
+                                <a href=""><i class="fa-regular fa-heart"></i></a>
                             </div>
                         </a>
                     </article>
@@ -71,8 +75,8 @@
                             </picture>
                             <div class="description">
                                 <p class="title"> La note enchantée</p>
-                                <p>Charonne</p>
-                                <a href=""><i class=""></i></a>
+                                <div class="text">Charonne</div>
+                                <a href=""><i class="fa-regular fa-heart"></i></a>
                             </div>
                         </a>
                     </article>
@@ -84,7 +88,7 @@
                             <div class="description">
                                 <p class="title"> A la française</p>
                                 <p>Cité Rouge</p>
-                                <a href=""><i class=""></i></a>
+                                <a href=""><i class="fa-regular fa-heart"></i></a>
                             </div>
                         </a>
                     </article>
@@ -96,7 +100,7 @@
                             <div class="description">
                                 <p class="title"> Le délice des sens</p>
                                 <p>Folie-Méricourt</p>
-                                <a href=""><i class=""></i></a>
+                                <a href=""><i class="fa-regular fa-heart"></i></a>
                             </div>
                         </a>
                     </article>

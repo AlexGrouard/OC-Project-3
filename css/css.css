@@ -1,10 +1,144 @@
+/*variables*/
+/*mixin*/
+/*GLOBAL*/
+body {
+  font-family: "Roboto";
+}
+
 .container {
   max-width: 768px;
-  padding: 0px 50px;
+  padding: 0px 20px;
   margin: 0 auto;
 }
 
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+}
+
+header .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -20px;
+  width: calc(100% + 40px);
+  font-family: "Shrikhand";
+  font-size: 24px;
+  height: 50px;
+  border-bottom: 1px solid grey;
+}
+header .subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -20px;
+  width: calc(100% + 40px);
+  background-color: #EAEAEA;
+  font-size: 12px;
+  height: 40px;
+  color: #353535;
+}
+header .subtitle i {
+  padding-right: 10px;
+}
+
+/*MAIN*/
+.presentation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -20px;
+  width: calc(100% + 40px);
+  flex-direction: column;
+  background-color: #F6F6F6;
+  text-align: center;
+  min-height: -webkit-max-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
+  padding: 20px 0;
+}
+.presentation h1 {
+  font-size: 20px;
+}
+.presentation .presentation-text {
+  color: #353535;
+  font-weight: lighter;
+  font-size: 14px;
+}
+.presentation .btn {
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 30px;
+  margin: 20px;
+  padding: 0 20px;
+}
+.presentation .btn .btn-text {
+  color: white;
+  font-size: 12px;
+}
+
+.btn-fonction {
+  font-size: 14px;
+  background-color: #F6F6F6;
+  border-radius: 30px;
+}
+.btn-fonction .function-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #9356DC;
+  max-width: 20px;
+  height: 20px;
+  color: white;
+  font-size: 12px;
+}
+.btn-fonction i:hover {
+  color: #9356DC;
+}
+
+.restaurant {
+  margin-left: -20px;
+  width: calc(100% + 40px);
+  flex-direction: column;
+  background-color: #F6F6F6;
+}
+.restaurant h2 {
+  padding-left: 20px;
+}
+
+.restaurant-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(25% - 20px);
+}
+
+.restaurant-grid .card {
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.description {
+  display: flex;
+  background-color: white;
+  border-radius: 0 0 20px 20px;
+  width: 100%;
+  padding: 10px;
+}
+.description .text {
+  padding-top: 5px;
+}
+.description .fa-heart {
+  align-items: flex-end;
+}
+
+/*FOOTER*/
 footer {
   background-color: #2b2929;
   color: white;
-}/*# sourceMappingURL=css.css.map */
+}
+
+/*DESKTOP*//*# sourceMappingURL=css.css.map */

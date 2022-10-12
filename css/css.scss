@@ -1,10 +1,144 @@
-.container{
-    max-width : 768px;
-    padding: 0px 50px;
-    margin: 0 auto;
+/*variables*/
+
+$primary:#9356DC;
+$secondary:#FF79DA;
+$tertiary:#99E2D0;
+$background-secondary:#EAEAEA;
+$background-primary:#F6F6F6;
+$alternate-font-color:#353535;
+$title-font:'Shrikhand';
+
+/*mixin*/
+@mixin full-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin background-overflow{
+    margin-left: -20px;
+    width: calc(100% + 40px);
 }
 
+/*GLOBAL*/
+body{
+    font-family: 'Roboto';
+}
+.container{
+    max-width : 768px;
+    padding: 0px 20px;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+    &:visited{
+        color:black;
+    }
+}
+
+header {
+    .title{
+        @include full-center;
+        @include background-overflow;
+        font-family: $title-font;
+        font-size: 24px;
+        height: 50px;
+        border-bottom: 1px solid grey;
+    }
+    .subtitle{
+        @include full-center;
+        @include background-overflow;
+        background-color: $background-secondary;
+        font-size: 12px;
+        height: 40px;
+        color: $alternate-font-color;
+        i{
+         padding-right: 10px ;   
+        }
+    }
+}
+
+/*MAIN*/
+.presentation{
+    @include full-center;
+    @include background-overflow;
+    flex-direction: column;
+    background-color: $background-primary;
+    text-align: center;
+    min-height: max-content;
+    padding: 20px 0;
+    h1{
+        font-size:20px;
+    }
+    .presentation-text{
+        color: $alternate-font-color;
+        font-weight: lighter;
+        font-size: 14px;
+    }
+    .btn{
+        background: linear-gradient($secondary,$primary);
+        border-radius: 30px;
+        margin: 20px;
+        padding: 0 20px;
+        .btn-text{
+            color: white;
+            font-size: 12px;
+        }
+    }
+}
+
+.btn-fonction{
+    font-size:14px;
+    background-color: $background-primary;
+    border-radius: 30px;
+    .function-number{
+        @include full-center;
+        border-radius: 50%;
+        background-color: $primary;
+        max-width: 20px;
+        height: 20px;
+        color: white;
+        font-size:12px;
+    }
+    i{
+        &:hover{
+            color: $primary;
+        }
+    }       
+}
+.restaurant{
+    @include background-overflow;
+    flex-direction: column;
+    background-color: $background-primary;
+    h2{
+       padding-left: 20px;
+    }
+}
+.restaurant-grid{
+    @include full-center;
+    flex-direction: column;
+    height: calc(25% - 20px);
+}
+.restaurant-grid .card{
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.description{
+    display: flex;
+    background-color: white;
+    border-radius: 0 0 20px 20px ;
+    width:100%;
+    padding: 10px;
+    .text{
+        padding-top: 5px;
+    }
+    .fa-heart{
+        align-items: flex-end;
+    }
+}
+/*FOOTER*/
 footer{
     background-color: #2b2929 ;
     color:white;
 }
+
+/*DESKTOP*/
