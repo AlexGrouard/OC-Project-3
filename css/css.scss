@@ -85,25 +85,52 @@ header {
         }
     }
 }
+.function{
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+.grid-function{
+    display: flex;
+    flex-direction: column;
+    height: calc(33% - 20px);
+}
 
-.btn-fonction{
+.btn-function{
+    display: flex;
     font-size:14px;
     background-color: $background-primary;
-    border-radius: 30px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    height: 60px;
+    box-shadow: 2px 7px 20px -1px rgba(144,144,144,0.33);
+    a{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     .function-number{
-        @include full-center;
         border-radius: 50%;
         background-color: $primary;
-        max-width: 20px;
-        height: 20px;
+        padding:4px 7px;
         color: white;
         font-size:12px;
+        margin-right: 20px;
+        margin-left: -10px;
     }
     i{
+        font-size: large;
+        color:grey;
+        margin-right: 20px;
         &:hover{
             color: $primary;
         }
     }       
+}
+.btn-function:hover{
+    background-color: #F5EDFF;
+    i{
+        color: $primary;
+    }
 }
 .restaurant{
     @include background-overflow;
@@ -130,6 +157,9 @@ header {
     transition: 0.3s all ease-in-out;
     height: 180px;
     background-color: white;
+    a{
+        margin-bottom: -20px;
+    }
     img{
         display: block;
         border:hidden;
@@ -141,6 +171,18 @@ header {
     &:hover{
         box-shadow: 1px 3px 20px -1px rgba(144,144,144,0.66);
     }
+    .new-sticker{
+        position: relative;
+        left: 70%;
+        bottom: 80%;
+        text-align: center;
+        padding: 5px;
+        background-color: #99E2D0;
+        color:#008766;
+        font-size: small;
+        border-radius: 5px;
+        width:calc(25% - 5px);
+    }
 }
 .card .description{
     display: flex;
@@ -148,6 +190,7 @@ header {
     align-items: center;
     background-color: white;
     border-radius: 0 0 20px 20px ;
+    padding-top: -20px;
     padding: 5px;
     .text{
         padding-top: 5px;
@@ -186,3 +229,6 @@ footer{
 }
 
 /*DESKTOP*/
+@media screen and (min-width:769px) {
+    
+}
