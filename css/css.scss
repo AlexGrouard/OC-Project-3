@@ -109,6 +109,7 @@ header {
     @include background-overflow;
     flex-direction: column;
     background-color: $background-primary;
+    padding-top: 20px;
     h2{
        padding-left: 20px;
     }
@@ -118,27 +119,70 @@ header {
     flex-direction: column;
     height: calc(25% - 20px);
 }
+
 .restaurant-grid .card{
+    flex-direction: column;
+    width: calc(100% - 40px);
+    margin-bottom:20px;
+    border: 5px solid white;
     border-radius: 20px;
-    margin-bottom: 20px;
+    box-shadow: 1px 3px 20px -1px rgba(144,144,144,0.33);
+    transition: 0.3s all ease-in-out;
+    height: 180px;
+    background-color: white;
+    img{
+        display: block;
+        border:hidden;
+        border-radius: 20px 20px 0 0;
+        width: 100%;
+        height: 124px;
+        object-fit: cover;
+    }
+    &:hover{
+        box-shadow: 1px 3px 20px -1px rgba(144,144,144,0.66);
+    }
 }
-.description{
+.card .description{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: white;
     border-radius: 0 0 20px 20px ;
-    width:100%;
-    padding: 10px;
+    padding: 5px;
     .text{
         padding-top: 5px;
     }
-    .fa-heart{
-        align-items: flex-end;
+    .heart-link{
+        padding-top:10px;
+    }
+    .hollow-heart{
+        &:hover{
+           color: $primary;
+        }
     }
 }
+
 /*FOOTER*/
 footer{
+    height: 100%;
     background-color: #2b2929 ;
     color:white;
+    font-weight: 300;
+    ul{
+        list-style-type: none;
+        margin:0;
+    }
+    li{
+        padding-top: 10px;
+        i{
+            font-size: small;
+            padding-right:5px;
+        }
+    }
+    .title{
+        font-family: $title-font;
+        font-size: 14px;
+    }
 }
 
 /*DESKTOP*/
