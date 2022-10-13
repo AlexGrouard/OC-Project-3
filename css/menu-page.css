@@ -1,0 +1,174 @@
+/*variables*/
+/*mixin*/
+/*GLOBAL*/
+body {
+  font-family: "Roboto";
+}
+
+.container {
+  max-width: 768px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header i {
+  order: 1;
+  color: grey;
+}
+header .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 20px);
+  padding-right: 20px;
+  font-family: "Shrikhand";
+  font-size: 24px;
+  height: 50px;
+  border-bottom: 1px solid grey;
+}
+
+/*MAIN*/
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -20px;
+  width: calc(100% + 40px);
+  flex-direction: column;
+  border-radius: 20px 20px 0 0;
+  background-color: #F6F6F6;
+}
+main img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+main .main-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 40px);
+}
+main .main-title h1 {
+  font-family: "Shrikhand";
+  font-size: 24px;
+}
+main h2 {
+  justify-content: flex-start;
+}
+
+.starter-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 2px 7px 20px -1px rgba(144, 144, 144, 0.33);
+  width: 100%;
+  height: 60px;
+}
+.menu-card .left-column div {
+  font-size: 14px;
+}
+.menu-card .price {
+  align-items: flex-end;
+  font-size: 14px;
+}
+
+/*FOOTER*/
+footer {
+  height: 100%;
+  background-color: #353535;
+  color: white;
+  font-weight: 300;
+}
+footer ul {
+  list-style-type: none;
+  margin: 0;
+}
+footer li {
+  padding-top: 10px;
+}
+footer li:hover {
+  color: #9356DC;
+}
+footer li i {
+  font-size: small;
+  padding-right: 5px;
+}
+footer .title {
+  font-family: "Shrikhand";
+  font-size: 14px;
+}
+
+/*TABLET*/
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .container {
+    max-width: 992px;
+  }
+  .grid-function {
+    flex-direction: row;
+  }
+  .btn-function {
+    margin-left: 20px;
+    padding-right: 20px;
+  }
+  .restaurant-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .card {
+    width: calc(50% - 40px);
+    margin-left: 10px;
+  }
+  footer {
+    padding-left: 20px;
+  }
+}
+/*DESKTOP*/
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 1400px;
+  }
+  .grid-function {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .btn-function {
+    margin-left: 20px;
+    padding-right: 20px;
+  }
+  .restaurant-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .card {
+    width: calc(50% - 40px);
+    margin-left: 10px;
+  }
+  footer {
+    padding-top: 20px;
+  }
+  footer ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}/*# sourceMappingURL=menu-page.css.map */

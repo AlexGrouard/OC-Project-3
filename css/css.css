@@ -151,6 +151,7 @@ header .subtitle i {
   flex-direction: column;
   margin-bottom: 20px;
   border: 5px solid white;
+  width: calc(100% - 40px);
   border-radius: 20px;
   box-shadow: 1px 3px 20px -1px rgba(144, 144, 144, 0.33);
   transition: 0.3s all ease-in-out;
@@ -207,7 +208,7 @@ header .subtitle i {
 /*FOOTER*/
 footer {
   height: 100%;
-  background-color: #2b2929;
+  background-color: #353535;
   color: white;
   font-weight: 300;
 }
@@ -246,7 +247,7 @@ footer .title {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .card {
+  .restaurant-grid .card {
     width: calc(50% - 40px);
     margin-left: 10px;
   }
@@ -271,7 +272,7 @@ footer .title {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .card {
+  .restaurant-grid .card {
     width: calc(50% - 40px);
     margin-left: 10px;
   }
