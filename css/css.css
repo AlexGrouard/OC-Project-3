@@ -149,7 +149,6 @@ header .subtitle i {
 
 .restaurant-grid .card {
   flex-direction: column;
-  width: calc(100% - 40px);
   margin-bottom: 20px;
   border: 5px solid white;
   border-radius: 20px;
@@ -219,6 +218,9 @@ footer ul {
 footer li {
   padding-top: 10px;
 }
+footer li:hover {
+  color: #9356DC;
+}
 footer li i {
   font-size: small;
   padding-right: 5px;
@@ -228,4 +230,56 @@ footer .title {
   font-size: 14px;
 }
 
-/*DESKTOP*//*# sourceMappingURL=css.css.map */
+/*TABLET*/
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .container {
+    max-width: 992px;
+  }
+  .grid-function {
+    flex-direction: row;
+  }
+  .btn-function {
+    margin-left: 20px;
+    padding-right: 20px;
+  }
+  .restaurant-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .card {
+    width: calc(50% - 40px);
+    margin-left: 10px;
+  }
+  footer {
+    padding-left: 20px;
+  }
+}
+/*DESKTOP*/
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 1400px;
+  }
+  .grid-function {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .btn-function {
+    margin-left: 20px;
+    padding-right: 20px;
+  }
+  .restaurant-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .card {
+    width: calc(50% - 40px);
+    margin-left: 10px;
+  }
+  footer {
+    padding-top: 20px;
+  }
+  footer ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}/*# sourceMappingURL=css.css.map */
