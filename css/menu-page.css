@@ -13,6 +13,7 @@ body {
 
 a {
   text-decoration: none;
+  color: black;
 }
 a:visited {
   color: black;
@@ -68,6 +69,13 @@ main img {
 .main-title h1 {
   font-family: "Shrikhand";
   font-size: 24px;
+}
+.main-title .heart-link:hover .hollow-heart, .main-title .heart-link .plain-heart {
+  display: none;
+}
+.main-title .heart-link:hover .plain-heart {
+  display: inline;
+  color: #9356DC;
 }
 
 h2 {
@@ -128,6 +136,9 @@ footer {
   background-color: #353535;
   color: white;
   font-weight: 300;
+}
+footer a {
+  color: white;
 }
 footer ul {
   list-style-type: none;

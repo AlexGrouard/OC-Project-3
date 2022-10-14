@@ -202,7 +202,11 @@ header .subtitle i {
 .card .description .heart-link {
   padding-top: 10px;
 }
-.card .description .hollow-heart:hover {
+.card .description .heart-link:hover .hollow-heart, .card .description .heart-link .plain-heart {
+  display: none;
+}
+.card .description .heart-link:hover .plain-heart {
+  display: inline;
   color: #9356DC;
 }
 

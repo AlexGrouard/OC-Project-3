@@ -199,10 +199,12 @@ header {
     .heart-link{
         padding-top:10px;
     }
-    .hollow-heart{
-        &:hover{
-           color: $primary;
-        }
+    .heart-link:hover .hollow-heart, .heart-link .plain-heart {
+        display: none;
+    }
+    .heart-link:hover .plain-heart{
+        display: inline;
+        color: $primary;
     }
 }
 

@@ -31,6 +31,7 @@ body{
 }
 a{
     text-decoration: none;
+    color: black;
     &:visited{
         color:black;
     }
@@ -81,6 +82,13 @@ main{
         font-family: $title-font;
         font-size: 24px;
     }
+    .heart-link:hover .hollow-heart, .heart-link .plain-heart {
+        display: none;
+    }
+    .heart-link:hover .plain-heart{
+        display: inline;
+        color: $primary;
+    }
 }    
 h2{
     justify-content: flex-start;
@@ -119,6 +127,7 @@ h2{
         overflow: hidden;
     }
 }
+
 .btn{
     @include full-center;
     background: linear-gradient($secondary,$primary);
@@ -136,6 +145,9 @@ footer{
     background-color: $alternate-font-color ;
     color:white;
     font-weight: $lighter-font;
+    a{
+        color:white
+    }
     ul{
         list-style-type: none;
         margin:0;
