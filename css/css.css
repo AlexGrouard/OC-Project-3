@@ -213,6 +213,9 @@ footer {
   color: white;
   font-weight: 300;
 }
+footer a, footer a:visited {
+  color: white;
+}
 footer ul {
   list-style-type: none;
   margin: 0;

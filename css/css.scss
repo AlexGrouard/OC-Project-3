@@ -212,6 +212,9 @@ footer{
     background-color: $alternate-font-color ;
     color: white;
     font-weight: 300;
+    a, a:visited{
+        color: white;
+    }
     ul{
         list-style-type: none;
         margin:0;
