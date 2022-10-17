@@ -36,7 +36,6 @@ a{
         color:black;
     }
 }
-
 header {
     display: flex;
     justify-content: center;
@@ -125,6 +124,8 @@ h2{
     }
     &:hover{
         overflow: hidden;
+        /*transform-origin: 0% 50%;*/
+        transform: scaleX(1);
     }
 }
 

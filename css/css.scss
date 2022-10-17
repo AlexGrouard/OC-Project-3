@@ -1,5 +1,4 @@
 /*variables*/
-
 $primary:#9356DC;
 $secondary:#FF79DA;
 $tertiary:#99E2D0;
@@ -18,6 +17,17 @@ $title-font:'Shrikhand';
     margin-left: -20px;
     width: calc(100% + 40px);
 }
+/*conditions*/
+
+/*@mixin font-color {
+    @if (lightness($color) < 25%) {
+        color:white;
+    }
+    @else {
+        color:black;
+    }
+}*/
+
 
 /*GLOBAL*/
 body{
@@ -35,7 +45,16 @@ a{
         color: black;
     }
 }
+/*
+.html-spinner{
+    if page loading is true 
+        then show spinner for 1 to 3 sec
+    when spinner is finished
+        then show homepage.
 
+    animation-duration:1s, 3s;
+}
+*/
 header {
     .title{
         @include full-center;
@@ -216,6 +235,9 @@ footer{
     font-weight: 300;
     a, a:visited{
         color: white;
+    }
+    a:hover{
+        color: $primary;
     }
     ul{
         list-style-type: none;

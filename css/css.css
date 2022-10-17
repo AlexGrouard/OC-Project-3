@@ -1,5 +1,14 @@
 /*variables*/
 /*mixin*/
+/*conditions*/
+/*@mixin font-color {
+    @if (lightness($color) < 25%) {
+        color:white;
+    }
+    @else {
+        color:black;
+    }
+}*/
 /*GLOBAL*/
 body {
   font-family: "Roboto";
@@ -19,6 +28,16 @@ a:visited {
   color: black;
 }
 
+/*
+.html-spinner{
+    if page loading is true 
+        then show spinner for 1 to 3 sec
+    when spinner is finished
+        then show homepage.
+
+    animation-duration:1s, 3s;
+}
+*/
 header .title {
   display: flex;
   justify-content: center;
@@ -219,6 +238,9 @@ footer {
 }
 footer a, footer a:visited {
   color: white;
+}
+footer a:hover {
+  color: #9356DC;
 }
 footer ul {
   list-style-type: none;
