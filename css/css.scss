@@ -56,7 +56,37 @@ a{
         color: black;
     }
 }
-
+.overlay-spinner{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.5);
+    animation: hidden 3s forwards;
+    @keyframes hidden {
+        0% {visibility: visible;}
+        100%{visibility: hidden;}
+    }
+    &::after {
+        content: " ";
+        display: block;
+        position: absolute;
+        left: 40%;
+        top: 50%;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border-radius: 50%;
+        border: 6px solid white;
+        border-color: white transparent white transparent;
+        animation: overlay_spinner 3s forwards;
+    }
+    @keyframes overlay_spinner {
+        0% {transform: rotate(0deg);}
+        100% {transform: rotate(360deg);}
+    }
+}
 header {
     .title{
         @include full-center;
@@ -64,12 +94,13 @@ header {
         font-family: $title-font;
         font-size: 24px;
         height: 50px;
-        border-bottom: 1px solid grey;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 3px;
     }
     .subtitle{
         @include full-center;
         @include background-overflow;
         background-color: $background-secondary;
+        margin-top: 3px;
         font-size: 12px;
         height: 40px;
         color: $alternate-font-color;
@@ -83,11 +114,15 @@ header {
 .presentation{
     @include full-center;
     @include background-overflow;
-    flex-direction: column;
     background-color: $background-primary;
     text-align: center;
     min-height: max-content;
     padding: 20px 0;
+}
+.presentation__box{
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
     h1{
         font-size:20px;
     }
@@ -99,11 +134,19 @@ header {
     .btn{
         background: linear-gradient($secondary,$primary);
         border-radius: 30px;
-        margin: 20px;
+        margin: 20px 80px;
         padding: 0 20px;
+        width: max-content;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        opacity: 1;
+        transition: 0.3s all ease-in-out;
         .btn-text{
             color: white;
             font-size: 12px;
+        }
+        &:hover{
+            opacity: 0.9;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         }
     }
 }
@@ -171,13 +214,12 @@ header {
 
 .restaurant-grid .card{
     flex-direction: column;
-    margin-bottom:20px;
-    border: 5px solid white;
+    margin-bottom: 20px;
     width: calc(100% - 40px);
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 1px 3px 20px -1px rgba(144,144,144,0.33);
     transition: 0.3s all ease-in-out;
-    height: 180px;
+    height: 190px;
     background-color: white;
     a{
         margin-bottom: -20px;
@@ -185,7 +227,7 @@ header {
     img{
         display: block;
         border:hidden;
-        border-radius: 20px 20px 0 0;
+        border-radius: 10px 10px 0 0;
         width: 100%;
         height: 124px;
         object-fit: cover;
@@ -211,14 +253,11 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    border-radius: 0 0 20px 20px ;
+    border-radius: 0 0 10px 10px ;
     padding-top: -20px;
-    padding: 5px;
+    padding: 10px;
     .text{
         padding-top: 5px;
-    }
-    .heart-link{
-        padding-top:10px;
     }
     .heart-link:hover .hollow-heart, .heart-link .plain-heart {
         display: none;
@@ -235,6 +274,7 @@ footer{
     background-color: $alternate-font-color ;
     color: white;
     font-weight: 300;
+    padding-bottom: 20px;
     a, a:visited{
         color: white;
     }
@@ -256,6 +296,7 @@ footer{
         }
     }
     .title{
+        margin: 10px 0;
         font-family: $title-font;
         font-size: 14px;
     }
@@ -303,7 +344,7 @@ footer{
         flex-direction: row;
         flex-wrap: wrap;
         .card{
-            width: calc(50% - 40px);
+            width: calc(33% - 40px);
             margin-left: 10px;
         }
 

@@ -82,7 +82,16 @@ h2 {
   justify-content: flex-start;
   font-size: 14px;
   font-weight: 300;
-  border-bottom: 2px solid green;
+  position: relative;
+}
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 30px;
+  height: 2px;
+  background-color: #99E2D0;
 }
 
 .starter-grid {
@@ -95,7 +104,7 @@ h2 {
   align-items: center;
   justify-content: space-between;
   background-color: white;
-  padding: 0 5px;
+  padding: 0 10px;
   border-radius: 10px;
   margin-bottom: 20px;
   box-shadow: 2px 7px 20px -1px rgba(144, 144, 144, 0.33);
@@ -125,7 +134,7 @@ h2 {
   background: linear-gradient(#FF79DA, #9356DC);
   width: 50%;
   border-radius: 30px;
-  margin: 40px 70px;
+  margin: 40px 80px;
 }
 .btn .btn-text {
   color: white;
