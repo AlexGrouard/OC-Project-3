@@ -1,5 +1,9 @@
 /*variables*/
 /*mixin*/
+/* loop
+display 1 child at x sec
+then every nth child + 0.5s
+*/
 /*GLOBAL*/
 body {
   font-family: "Roboto";
@@ -108,7 +112,7 @@ h2::after {
   border-radius: 10px;
   margin-bottom: 20px;
   box-shadow: 2px 7px 20px -1px rgba(144, 144, 144, 0.33);
-  width: 100%;
+  width: 90%;
   height: 60px;
 }
 .menu-card .left-column div {
@@ -121,10 +125,25 @@ h2::after {
   font-weight: bold;
   padding-top: 20px;
 }
-.menu-card:hover {
+.right-column {
+  display: flex;
+}
+.right-column .checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
   overflow: hidden;
-  /*transform-origin: 0% 50%;*/
-  transform: scaleX(1);
+  margin-right: -60px;
+  margin-left: 10px;
+  height: 60px;
+  width: 50px;
+  border-radius: 0 10px 10px 0;
+  background-color: #99E2D0;
+}
+.right-column .checkbox i {
+  color: white;
+  font-size: larger;
 }
 
 .btn {
@@ -135,10 +154,17 @@ h2::after {
   width: 50%;
   border-radius: 30px;
   margin: 40px 80px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  opacity: 1;
+  transition: 0.3s all ease-in-out;
 }
 .btn .btn-text {
   color: white;
   font-size: 12px;
+}
+.btn:hover {
+  opacity: 0.9;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 /*FOOTER*/
@@ -166,6 +192,7 @@ footer li i {
   padding-right: 5px;
 }
 footer .title {
+  margin: 10px 0;
   font-family: "Shrikhand";
   font-size: 14px;
 }

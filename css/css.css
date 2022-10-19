@@ -1,24 +1,10 @@
 /*variables*/
 /*mixin*/
 /*conditions*/
-/*@mixin font-color {
-    @if (lightness($color) < 25%) {
-        color:white;
-    }
-    @else {
-        color:black;
-    }
+/*@mixin fill-animation {
+    if plain-heart == 0
+        then 
 }*/
-/*
-.html-spinner{
-    if page loading is true 
-        then show spinner for 1 to 3 sec
-    when spinner is finished
-        then show homepage.
-
-    animation-duration:1s, 3s;
-}
-*/
 /*GLOBAL*/
 body {
   font-family: "Roboto";

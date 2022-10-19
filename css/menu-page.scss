@@ -20,6 +20,11 @@ $lighter-font:300;
     width: calc(100% + 40px);
 }
 
+/* loop
+display 1 child at x sec
+then every nth child + 0.5s
+*/
+
 /*GLOBAL*/
 body{
     font-family: 'Roboto';
@@ -117,7 +122,7 @@ h2{
     border-radius: 10px;
     margin-bottom: 20px;
     box-shadow: 2px 7px 20px -1px rgba(144,144,144,0.33);
-    width: 100%;
+    width: 90%;
     height: 60px;
     .left-column{
         div{
@@ -130,11 +135,27 @@ h2{
         font-size: 13px;
         font-weight: bold;
         padding-top:20px;
+
     }
     &:hover{
+    }
+}
+.right-column{
+    display: flex;
+    .checkbox{
+        @include full-center;
+        visibility: hidden;
         overflow: hidden;
-        /*transform-origin: 0% 50%;*/
-        transform: scaleX(1);
+        margin-right: -60px;
+        margin-left:10px;
+        height: 60px;
+        width: 50px;
+        border-radius: 0 10px 10px 0;
+        background-color: $tertiary;
+        i{
+            color: white;
+            font-size: larger;
+        }
     }
 }
 
@@ -144,9 +165,16 @@ h2{
     width: 50%;
     border-radius: 30px;
     margin: 40px 80px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    opacity: 1;
+    transition: 0.3s all ease-in-out;
     .btn-text{
         color: white;
         font-size: 12px;
+    }
+    &:hover{
+        opacity: 0.9;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
 }
 /*FOOTER*/
@@ -173,6 +201,7 @@ footer{
         }
     }
     .title{
+        margin: 10px 0;
         font-family: $title-font;
         font-size: 14px;
     }
