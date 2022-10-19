@@ -28,6 +28,17 @@ $title-font:'Shrikhand';
     }
 }*/
 
+/*
+.html-spinner{
+    if page loading is true 
+        then show spinner for 1 to 3 sec
+    when spinner is finished
+        then show homepage.
+
+    animation-duration:1s, 3s;
+}
+*/
+
 
 /*GLOBAL*/
 body{
@@ -45,16 +56,7 @@ a{
         color: black;
     }
 }
-/*
-.html-spinner{
-    if page loading is true 
-        then show spinner for 1 to 3 sec
-    when spinner is finished
-        then show homepage.
 
-    animation-duration:1s, 3s;
-}
-*/
 header {
     .title{
         @include full-center;
@@ -152,7 +154,7 @@ header {
         color: $primary;
     }
 }
-.restaurant{
+#restaurant{
     @include background-overflow;
     flex-direction: column;
     background-color: $background-primary;
