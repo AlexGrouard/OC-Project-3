@@ -22,7 +22,7 @@ $delay: 1s;
 }
 @mixin fadeInAnim{
     animation-name: FadeIn;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-fill-mode: both;
     @for $i from 1 through 5 {
         &:nth-of-type(#{$i}) {
@@ -77,6 +77,7 @@ $delay: 1s;
 @mixin checkboxrotate {
     animation-name: Rotate;
     animation-duration: 0.5s;
+    animation-timing-function: linear;
     animation-fill-mode: forwards;
     @keyframes Rotate{
         0%{
@@ -213,7 +214,7 @@ h2{
     .checkbox{
         @include checkboxAnim;
         .fa-circle-check{
-            @include checkboxrotate()
+            @include checkboxrotate;
         }
     }
 }
