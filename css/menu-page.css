@@ -1,9 +1,5 @@
 /*variables*/
 /*mixin*/
-/* loop
-display 1 child at x sec
-then every nth child + 0.5s
-*/
 /*GLOBAL*/
 body {
   font-family: "Roboto";
@@ -80,37 +76,16 @@ main img {
 .main-title .heart-link:hover .plain-heart {
   display: inline;
   color: #9356DC;
-}
-
-.menu {
-  -webkit-animation-name: FadeIn;
-          animation-name: FadeIn;
+  -webkit-animation-name: FillIn;
+          animation-name: FillIn;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
-.menu article:nth-of-type(1) {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-.menu article:nth-of-type(2) {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-.menu article:nth-of-type(3) {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-.menu article:nth-of-type(4) {
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
-}
-.menu article:nth-of-type(5) {
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
-}
-@-webkit-keyframes FadeIn {
+@-webkit-keyframes FillIn {
   0% {
     opacity: 0;
   }
@@ -118,7 +93,7 @@ main img {
     opacity: 1;
   }
 }
-@keyframes FadeIn {
+@keyframes FillIn {
   0% {
     opacity: 0;
   }
@@ -148,6 +123,7 @@ h2::after {
   flex-direction: column;
 }
 
+/*Card*/
 .menu-card {
   display: flex;
   align-items: center;
@@ -159,7 +135,52 @@ h2::after {
   box-shadow: 2px 7px 20px -1px rgba(144, 144, 144, 0.33);
   width: 90%;
   height: 60px;
-  /* @include fadeInAnim;*/
+  -webkit-animation-name: FadeIn;
+          animation-name: FadeIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.menu-card:nth-of-type(1) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.menu-card:nth-of-type(2) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.menu-card:nth-of-type(3) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+.menu-card:nth-of-type(4) {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+.menu-card:nth-of-type(5) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+@-webkit-keyframes FadeIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 .menu-card .left-column {
   display: -webkit-box;
@@ -177,6 +198,64 @@ h2::after {
   font-weight: bold;
   padding-top: 20px;
 }
+
+.menu-card:hover .checkbox {
+  -webkit-animation-name: Slide;
+          animation-name: Slide;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes Slide {
+  0% {
+    margin-right: -10px;
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    margin-right: -10px;
+    width: 60px;
+  }
+}
+@keyframes Slide {
+  0% {
+    margin-right: -10px;
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    margin-right: -10px;
+    width: 60px;
+  }
+}
+.menu-card:hover .checkbox .fa-circle-check {
+  -webkit-animation-name: Rotate;
+          animation-name: Rotate;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes Rotate {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes Rotate {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
 .right-column {
   display: flex;
 }
@@ -184,8 +263,9 @@ h2::after {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
   overflow: hidden;
-  margin-right: -10px;
+  margin-right: -60px;
   margin-left: 10px;
   height: 60px;
   width: 50px;
@@ -197,6 +277,7 @@ h2::after {
   font-size: larger;
 }
 
+/*order btn*/
 .btn {
   display: flex;
   justify-content: center;

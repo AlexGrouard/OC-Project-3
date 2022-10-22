@@ -22,26 +22,71 @@ $delay: 1s;
 }
 @mixin fadeInAnim{
     animation-name: FadeIn;
-    animation-duration: 3s;
+    animation-duration: 1s;
     animation-fill-mode: both;
     @for $i from 1 through 5 {
         &:nth-of-type(#{$i}) {
-            $delay: 0.5 * $i;
+            $delay: 0.3 * $i;
             animation-delay:(#{$delay}s);
         }
     }
     @keyframes FadeIn {
-        0%{opacity: 0;}
-        100%{opacity:1;}
+        0%{
+            opacity: 0;
+            transform: translate3d(0, 100%, 0);
+        }
+        100%{
+            opacity:1;
+            transform: translate3d(0, 0, 0);
+        }
     }
 }
-/* loop
-display 1 child at x sec
-then every nth child + 0.5s
-*/
+@mixin HeartFill {
+    animation-name: FillIn;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    @keyframes FillIn {
 
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
 
-
+}
+@mixin checkboxAnim {
+    animation-name: Slide;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    @keyframes Slide{
+        0%{
+            margin-right: -10px;
+            opacity:0;
+            width: 0;
+        }
+        100%{
+            opacity: 1;
+            margin-right: -10px;
+            width: 60px;
+        }
+    }
+}
+@mixin checkboxrotate {
+    animation-name: Rotate;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    @keyframes Rotate{
+        0%{
+            transform: rotate(180deg);
+        }
+        100%{
+            transform: rotate(0);
+        }
+    }
+}
 /*GLOBAL*/
 body{
     font-family: 'Roboto';
@@ -109,23 +154,10 @@ main{
     .heart-link:hover .plain-heart{
         display: inline;
         color: $primary;
+        @include HeartFill;
     }
 }
-.menu {
-    animation-name: FadeIn;
-    animation-duration: 3s;
-    animation-fill-mode: both;
-    @for $i from 1 through 5 {
-        article:nth-of-type(#{$i}) {
-            $delay: 1 * $i;
-            animation-delay:(#{$delay}s);
-        }
-    }
-    @keyframes FadeIn {
-        0%{opacity: 0;}
-        100%{opacity:1;}
-    }
-}    
+ 
 h2{
     justify-content: flex-start;
     font-size: 14px;
@@ -145,6 +177,8 @@ h2{
     display: flex;
     flex-direction: column;
 }
+
+/*Card*/
 .menu-card{
     display: flex;
     align-items: center;
@@ -156,7 +190,7 @@ h2{
     box-shadow: 2px 7px 20px -1px rgba(144,144,144,0.33);
     width: 90%;
     height: 60px;
-   /* @include fadeInAnim;*/
+    @include fadeInAnim;
     .left-column{
         display: -webkit-box;
         -webkit-line-clamp: 2;
@@ -174,15 +208,22 @@ h2{
         padding-top:20px;
 
     }
-    &:hover{
+}
+.menu-card:hover{
+    .checkbox{
+        @include checkboxAnim;
+        .fa-circle-check{
+            @include checkboxrotate()
+        }
     }
 }
 .right-column{
     display: flex;
     .checkbox{
         @include full-center;
+        opacity: 0;
         overflow: hidden;
-        margin-right: -10px;
+        margin-right: -60px;
         margin-left:10px;
         height: 60px;
         width: 50px;
@@ -192,9 +233,11 @@ h2{
             color: white;
             font-size: larger;
         }
-    }
-}
 
+    }
+
+}
+/*order btn*/
 .btn{
     @include full-center;
     background: linear-gradient($secondary,$primary);
