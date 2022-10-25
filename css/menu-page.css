@@ -76,30 +76,8 @@ main img {
 .main-title .heart-link:hover .plain-heart {
   display: inline;
   color: #9356DC;
-  -webkit-animation-name: FillIn;
-          animation-name: FillIn;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-@-webkit-keyframes FillIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes FillIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  transition: transform 0.2s linear, opacity 0.2s linear;
+  transform-origin: center 60%;
 }
 
 h2 {

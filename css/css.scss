@@ -6,6 +6,8 @@ $background-secondary:#EAEAEA;
 $background-primary:#F6F6F6;
 $alternate-font-color:#353535;
 $title-font:'Shrikhand';
+$heart-width : 20px;
+$heart-height : 20px;
 
 /*mixin*/
 @mixin full-center {
@@ -237,14 +239,69 @@ header {
     .text{
         padding-top: 5px;
     }
-    .heart-link:hover .hollow-heart, .heart-link .plain-heart {
-        display: none;
-    }
-    .heart-link:hover .plain-heart{
-        display: inline;
-        color: $primary;
-    }
 }
+
+
+/* SVG Heart animation*/
+.heart-container{
+    position: relative;
+    width: $heart-width;
+    height:$heart-height;
+}
+.heart_link{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    clip-path: url(#svgPath);
+    &:checked {
+        &::before {
+           transform: scale(1);
+           opacity: 1;
+        }
+    }
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: $primary;
+        opacity: 0;
+        transform: scale(0);
+        transition: transform 0.2s linear, opacity 0.2s linear;
+        transform-origin: center 50%;
+    }
+  }
+  
+.hollow_heart {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: black;
+}
+  
+@keyframes pulse {
+    0% {transform: scale(1);}
+
+    30% {transform: scale(1.2);}
+
+    60% {transform: scale(1);}
+}
+
+/*Icon heart animation*/
+
+.heart-link:checked .hollow-heart, .heart-link .plain-heart {
+    display: none;
+}
+.heart-link:checked .plain-heart{
+    display: inline;
+    color: $primary;
+}
+
 
 /*FOOTER*/
 footer{

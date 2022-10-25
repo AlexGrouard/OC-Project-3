@@ -155,10 +155,10 @@ main{
     .heart-link:hover .plain-heart{
         display: inline;
         color: $primary;
-        @include HeartFill;
+        transition: transform 0.2s linear, opacity 0.2s linear;
+        transform-origin: center 60%;
     }
 }
- 
 h2{
     justify-content: flex-start;
     font-size: 14px;
