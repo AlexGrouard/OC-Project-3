@@ -294,14 +294,13 @@ header {
 
 /*Icon heart animation*/
 
-.heart-link:checked .hollow-heart, .heart-link .plain-heart {
+.heart-link:hover .hollow-heart, .heart-link .plain-heart {
     display: none;
 }
-.heart-link:checked .plain-heart{
+.heart-link:hover .plain-heart{
     display: inline;
     color: $primary;
 }
-
 
 /*FOOTER*/
 footer{
