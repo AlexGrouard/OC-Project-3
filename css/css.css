@@ -121,6 +121,9 @@ header .subtitle i {
 
 .presentation__box {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   flex-direction: column;
   max-width: 90%;
 }
@@ -135,7 +138,7 @@ header .subtitle i {
 .presentation__box .btn {
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 30px;
-  margin: 20px 50px;
+  margin: 20px 0;
   padding: 0 20px;
   width: -webkit-max-content;
   width: -moz-max-content;
