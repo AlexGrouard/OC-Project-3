@@ -213,6 +213,7 @@ header .subtitle i {
   flex-direction: column;
   background-color: #F6F6F6;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 #restaurant h2 {
   padding-left: 20px;
@@ -254,7 +255,7 @@ header .subtitle i {
 .restaurant-grid .card .new-sticker {
   position: relative;
   left: 70%;
-  bottom: 80%;
+  bottom: 90%;
   text-align: center;
   padding: 5px;
   background-color: #99E2D0;

@@ -174,8 +174,8 @@ h2{
         background-color: $tertiary;
     }
 }
-.starter-grid{
-    display: flex;
+.menu-grid{
+    @include full-center;
     flex-direction: column;
 }
 
@@ -248,9 +248,10 @@ h2{
 .btn{
     @include full-center;
     background: linear-gradient($secondary,$primary);
-    width: 50%;
     border-radius: 30px;
-    margin: 40px 80px;
+    margin: 20px 0;
+    padding: 0 20px;
+    width: max-content;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     opacity: 1;
     transition: 0.3s all ease-in-out;

@@ -184,6 +184,7 @@ header {
     flex-direction: column;
     background-color: $background-primary;
     padding-top: 20px;
+    padding-bottom: 20px;
     h2{
        padding-left: 20px;
     }
@@ -220,7 +221,7 @@ header {
     .new-sticker{
         position: relative;
         left: 70%;
-        bottom: 80%;
+        bottom: 90%;
         text-align: center;
         padding: 5px;
         background-color: #99E2D0;
