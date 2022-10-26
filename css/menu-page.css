@@ -160,13 +160,17 @@ h2::after {
     transform: translate3d(0, 0, 0);
   }
 }
-.menu-card .left-column {
+.menu-card .left-column strong {
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 .menu-card .left-column div {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   font-size: 13px;
   font-weight: 300;
 }
