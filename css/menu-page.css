@@ -113,7 +113,7 @@ h2::after {
   border-radius: 10px;
   margin-bottom: 20px;
   box-shadow: 2px 7px 20px -1px rgba(144, 144, 144, 0.33);
-  width: 90%;
+  width: 280px;
   height: 60px;
   -webkit-animation-name: FadeIn;
           animation-name: FadeIn;
