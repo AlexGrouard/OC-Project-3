@@ -13,4 +13,5 @@ A mobile website for browsing restaurant menu and reservation.
 As a new Fron-end dev my work was :
   - Gather all infos
   - HTML/CSS Integration from figma
+  - Add CSS animations
 
